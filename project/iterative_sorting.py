@@ -20,11 +20,25 @@ def selection_sort(arr):
 
 # TO-DO: implement the Insertion Sort function below
 def insertion_sort(arr):
+    for i in range(1, len(arr)):
+
+        currentVal = arr[i]
+        pos = i
+
+        while pos > 0 and arr[pos - 1] > currentVal:
+            arr[pos] = arr[pos - 1]
+            pos = pos - 1
+
+        arr[pos] = currentVal
 
     return arr
 
 
+print(insertion_sort([1, 54, 18, 12, 23, 9, 13, 0, 10, 79]))
+
 # STRETCH: implement the Bubble Sort function below
+
+
 def bubble_sort(arr):
 
     return arr
